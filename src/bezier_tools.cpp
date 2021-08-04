@@ -66,6 +66,13 @@ void bezier(const Eigen::MatrixXd &coeffs, double s, Eigen::VectorXd &out)
         out(i) = bezier(coeffs.row(i), s);
 }
 
+void bezier(const Eigen::MatrixXd &coeffs, Eigen::VectorXd s, Eigen::MatrixXd &out)
+{
+    for (int j = 0; j < s.rows(); j++)
+        for (int i = 0; i < coeffs.rows(); ++i)
+            out(i,j) = bezier(coeffs.row(i), s(j));
+}
+
 double diff_coeff(const Eigen::VectorXd &coeff, Eigen::VectorXd &dcoeff)
 {
     int m = coeff.size() - 1;

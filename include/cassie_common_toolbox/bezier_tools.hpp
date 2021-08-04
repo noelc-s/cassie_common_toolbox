@@ -14,6 +14,7 @@ double singleterm_bezier(int m, int k, double s);
 double bezier(const Eigen::VectorXd &coeff, double s);
 void bezier(const Eigen::MatrixXd &coeffs, double s, Eigen::VectorXd &out);
 double dbezier(const Eigen::VectorXd &coeff, double s);
+void bezier(const Eigen::MatrixXd &coeffs, Eigen::VectorXd s, Eigen::MatrixXd &out);
 void dbezier(const Eigen::MatrixXd &coeffs, double s, Eigen::VectorXd &out);
 double d2bezier(const Eigen::VectorXd &coeff, double s);
 void d2bezier(const Eigen::MatrixXd &coeffs, double s, Eigen::VectorXd &out);
