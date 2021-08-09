@@ -4,3 +4,4 @@ float64[10] ya
 float64[10] dya
 float64[10] yd
 float64[10] dyd
+int64       mode
